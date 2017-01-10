@@ -77,3 +77,31 @@ Any questions or feedback is always welcome so feel free to join our IRC
 channel:
 
     #salt-formulas @ irc.freenode.net
+
+Testing
+=======
+
+`Salt formula testing <https://salt-formulas.readthedocs.io/en/latest/develop/testing-formulas.html>`_ and
+automated CI is covered in the main `documentation <https://salt-formulas.readthedocs.io/en/latest/develop/testing.html>`_.
+
+To run a local smoke test run:
+
+.. code-block:: shell
+
+  $ make test
+
+To run a local multiplatform rehearsal test run:
+
+.. code-block:: shell
+
+  $ kitchen list
+
+  Instance                    Driver   Provisioner  Verifier  Transport  Last Action
+
+  client-single-ubuntu-1404   Docker   SaltSolo     Inspec    Ssh        Verified
+  client-single-ubuntu-1604   Docker   SaltSolo     Inspec    Ssh        Converged
+  client-single-centos-71     Docker   SaltSolo     Inspec    Ssh        <Not Created>
+
+  $ kitchen converge [instance]
+  $ kitchen verify [instance]
+
