@@ -8,6 +8,7 @@ install:
   - |
     test -e Gemfile || cat <<EOF > Gemfile
     source 'https://rubygems.org'
+    gem 'rake'
     gem 'test-kitchen'
     gem 'kitchen-docker'
     gem 'kitchen-inspec'
