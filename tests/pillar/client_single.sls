@@ -14,5 +14,3 @@ linux:
         sudo: true
         full_name: John Doe
         home: /home/jdoe
-        password:
-          passw0rd
